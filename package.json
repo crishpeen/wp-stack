@@ -1,0 +1,33 @@
+{
+  "name": "wp-stack",
+  "version": "0.0.0",
+  "author": "Jan Kryšpín",
+  "devDependencies": {
+    "babel-core": "^7.0.0-beta.3",
+    "babel-preset-env": "^7.0.0-beta.3",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-visionapps": "^1.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-uglify": "^3.0.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-visionapps": "~0.5.0",
+    "stylelint-config-visionapps-order": "~0.3.1",
+    "stylelint-order": "~1.0.0"
+  },
+  "engines": {
+    "node": "^8.0.0"
+  }
+}

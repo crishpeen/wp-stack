@@ -1,0 +1,55 @@
+# External dependencies
+/bower_components
+/node_modules
+/vendor
+
+# WordPress config, core and plugins
+wp-config.php
+www/wp/*
+
+# WP content
+www/wp-content/plugins/*
+www/wp-content/themes/*
+www/wp-content/languages/
+!www/wp-content/themes/index.php
+!www/wp-content/themes/wp-stack
+www/wp-content/themes/wp-stack/style.css
+www/wp-content/uploads/*
+
+# Generated files
+/.tmp
+/www/wp-content/themes/wp-stack/assets/*
+
+
+#------------------------
+#  Main ignored items
+#------------------------
+
+/wp-config.php
+/www/wp/wp-config.php
+.maintenance
+/.htaccess
+/web.config
+/www/data
+
+#------------------------
+#  Log files
+#------------------------
+
+*.log
+error_log
+access_log
+
+
+#------------------------
+#  OS Files
+#------------------------
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes

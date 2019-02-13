@@ -1,0 +1,25 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^www/wp/wp-admin/includes/ - [F,L]
+RewriteRule ^www/wp/wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^www/wp/wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^www/wp/wp-includes/theme-compat/ - [F,L]
+
+# serve static resources
+RewriteRule ^(wp-content.*)$ www/$1 [L]
+RewriteRule ^data/(.+)$ www/data/$1 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-content.*) www/$2 [L]
+RewriteRule ^(favicon.*)$ www/$1 [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+# Redirect request to *.php scripts
+RewriteRule ^$ www/wp/index.php [L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(admin|includes).*) www/wp/$2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ www/wp/$2 [L]
+RewriteRule ^(.*)$ www/wp/index.php [L]

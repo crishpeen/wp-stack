@@ -1,0 +1,9 @@
+{
+  "extends" : ["visionapps"],
+  "env": {
+    "browser": true,
+  },
+  "globals": {
+    "lozad": false
+  }
+}

@@ -1,0 +1,31 @@
+version: "3"
+services:
+    adminer:
+        image: clue/adminer
+        links:
+            - db
+        ports:
+            - 81:80
+
+    db:
+        image: mariadb:10.2
+        environment:
+            - MYSQL_ROOT_PASSWORD=pass
+            - MYSQL_USER=docker
+
+    tools:
+        build: docker/tools
+        volumes:
+            - .:/www
+        working_dir: /www
+        links:
+            - db
+
+    web:
+        build: docker/apache
+        volumes:
+            - .:/www
+        links:
+            - db
+        ports:
+            - 80:80
